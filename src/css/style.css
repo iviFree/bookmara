@@ -1,0 +1,156 @@
+/* ==========================================
+   SELENE INTERIORS — PALETA CUSTOM & FULL VIEWPORT
+   ========================================== */
+
+:root {
+  --marfil-editorial: #f7f5f2;
+  --carbon-profundo: #1e1e1e;
+  --gris-piedra: #8d8a84;
+  --taupe-calido: #b7a998;
+  --espresso: #473c34;
+  --laton-mate: #c8a76a;
+
+  --font-serif: "Georgia", "Times New Roman", serif;
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--marfil-editorial);
+  color: var(--carbon-profundo);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- CLASES DE COLOR DE TU PALETA --- */
+.text-carbon {
+  color: var(--carbon-profundo) !important;
+}
+.text-gris {
+  color: var(--gris-piedra) !important;
+}
+.text-taupe {
+  color: var(--taupe-calido) !important;
+}
+.text-laton {
+  color: var(--laton-mate) !important;
+}
+.bg-marfil {
+  background-color: var(--marfil-editorial) !important;
+}
+.bg-espresso {
+  background-color: var(--espresso) !important;
+}
+
+/* Bordes y líneas en Taupe Cálido muy sutil */
+.border-taupe {
+  border-color: var(--taupe-calido) !important;
+  border-width: 1px !important;
+  opacity: 0.35;
+}
+
+/* --- TIPOGRAFÍA Y MICRO-ESTILOS --- */
+.font-serif {
+  font-family: var(--font-serif);
+}
+.letter-spacing-sm {
+  letter-spacing: 1px;
+}
+.letter-spacing-md {
+  letter-spacing: 2px;
+}
+.letter-spacing-lg {
+  letter-spacing: 3px;
+}
+
+/* Enlaces y Hovers con Taupe Cálido y Latón Mate */
+a {
+  color: var(--carbon-profundo);
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+a:hover {
+  color: var(--laton-mate);
+}
+
+/* Botones de acento (Latón Mate) */
+.btn-laton {
+  background-color: transparent;
+  color: var(--carbon-profundo);
+  border: 1px solid var(--laton-mate);
+  padding: 0.8rem 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.btn-laton:hover {
+  background-color: var(--laton-mate);
+  color: #fff;
+}
+
+/* Contenedores 100% Viewport con padding lateral estilo Fluid Engine */
+.fluid-section {
+  padding-left: 5vw !important;
+  padding-right: 5vw !important;
+}
+
+/* Efectos en imágenes de proyectos */
+.project-img-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.project-img-wrapper img {
+  height: 540px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover img {
+  transform: scale(1.025);
+}
+
+.gallery-img {
+  height: 80vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Inputs de formulario elegantes (Página Contacto) */
+.form-control-editorial {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--taupe-calido);
+  border-radius: 0;
+  padding: 0.8rem 0;
+  color: var(--carbon-profundo);
+}
+
+.form-control-editorial:focus {
+  background: transparent;
+  box-shadow: none;
+  border-bottom-color: var(--laton-mate);
+  color: var(--carbon-profundo);
+}
+
+@media (max-width: 768px) {
+  .hero-img {
+    height: 50vh !important;
+  }
+  .gallery-img {
+    height: 50vh;
+  }
+  .project-img-wrapper img {
+    height: 380px;
+  }
+  .fluid-section {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
